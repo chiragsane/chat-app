@@ -4,11 +4,15 @@ md-sidenav-container {
     md-sidenav {
         padding: 8px;
         width: 240px;
+        right: 0;
+        transform: translate3d(100%, 0, 0);
         button {
             width: 100%;
+            margin-bottom: 8px;
             span {
                 display: flex !important;
                 align-items: center;
+                justify-content: space-between;
                 md-icon {
                     padding-right: 8px;
                 }
