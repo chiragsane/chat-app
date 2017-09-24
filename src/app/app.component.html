@@ -1,11 +1,14 @@
 <md-toolbar color="primary">
     <span>Chat App</span>
     <span style="flex: 1 1 auto"></span>
-    <button md-icon-button (click)="sidenav.open()"><md-icon>menu</md-icon></button>
+    <button md-icon-button *ngIf="User?.exists" (click)="sidenav.open()"><md-icon>menu</md-icon></button>
 </md-toolbar>
 <md-sidenav-container (click)="sidenav.close()">
     <md-sidenav #sidenav>
-        <button md-raised-button color="primary"><span><md-icon>menu</md-icon>Menu<md-icon></md-icon></span></button>
-        <button md-raised-button color="primary">Menu</button>
+        <button md-raised-button color="primary"><span><md-icon>person</md-icon>My Profile<md-icon></md-icon></span></button>
+        <button md-raised-button color="primary"><span><md-icon>chat</md-icon>Conversations<md-icon></md-icon></span></button>
+        <button md-raised-button color="primary"><span><md-icon>group</md-icon>Friends<md-icon></md-icon></span></button>
+        <span style="flex: 1 1 auto"></span>
+        <button md-raised-button color="primary"><span><md-icon></md-icon>Logout<md-icon>directions_run</md-icon></span></button>
     </md-sidenav>
 </md-sidenav-container>
